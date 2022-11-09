@@ -1,0 +1,31 @@
+.blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+
+}
+
+.block {
+    background-color: #d8eeff;
+    min-width: 0;
+    word-wrap: break-word;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+    width: 20rem;
+    padding: 2rem 0;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.components {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.indexQuality {
+    display: flex;
+    justify-content: center;
+}
