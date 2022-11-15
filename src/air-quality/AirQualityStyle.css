@@ -22,10 +22,28 @@
 .components {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    width: 100%;
+    text-align: center;
+}
+
+.components_1 {
+    width: 50%;
+
+}
+
+.components_2 {
+    width: 50%;
 }
 
 .indexQuality {
     display: flex;
     justify-content: center;
+}
+
+.header {
+    text-align: center;
+}
+
+.weekdayName {
+    text-align: center;
 }

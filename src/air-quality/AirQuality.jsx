@@ -3,66 +3,45 @@ import './AirQualityStyle.css';
 import useGetAirPollutionData from './hook/useGetAirPollutionData';
 
 function AirQuality() {
-    const forecastAirPollution = useGetAirPollutionData();
-    console.log(forecastAirPollution);
-    const weekDay = forecastAirPollution.map((air) => new Date(air.dt * 1000));
-    console.log(weekDay);
-    const displayData = forecastAirPollution.map((air) => air.main.aqi);
+    const forecastAirPollutions = useGetAirPollutionData();
 
     return (
-        <div>
-            <div className="header">
-                <h1>Любляна</h1>
-            </div>
+        <div className="airQuality">
+            <h1 className="header">Ljubljana</h1>
+
             <div className="blocks">
-                <div className="block">
-                    {
-                        weekDay.map((date, index) => (
-                            <div className="day">{""+date}</div>
-                            )
-                        )
-                    }
-                    <div className="indexQuality">{displayData}</div>
-                    <div className="icons"></div>
-                    <div className="components">
-                        <div>
-                            <p>
-                                CO:
-                                {}
+                {forecastAirPollutions.map((forecastAirPollution) => {
+                    const displayData = new Date(forecastAirPollution.dt * 1000).toDateString();
+                    const statusAir = forecastAirPollution.main.aqi;
+                    const pollution = forecastAirPollution.components;
+
+
+                    return (
+
+                        <div className="block">
+                            <p className="weekdayName">
+                                {displayData}
                             </p>
-                            <p>
-                                NO:
-                                {}
+                            <p className="indexQuality">
+                                {statusAir}
                             </p>
-                            <p>
-                                NO2:
-                                {}
-                            </p>
-                            <p>
-                                O3:
-                                {}
-                            </p>
+                            <div className="components">
+                                <div className="components_1">
+                                    <p>CO:{pollution.co}</p>
+                                    <p>NO:{pollution.no}</p>
+                                    <p>NO2:{pollution.no2}</p>
+                                    <p>O3:{pollution.o3}</p>
+                                </div>
+                                <div className="components_2">
+                                    <p>SO2:{pollution.so2}</p>
+                                    <p>PM2.5:{pollution.pm2_5}</p>
+                                    <p>PM10:{pollution.pm10}</p>
+                                    <p>NH3:{pollution.nh3}</p>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <p>
-                                SO2:
-                                {}
-                            </p>
-                            <p>
-                                PM2.5:
-                                {}
-                            </p>
-                            <p>
-                                PM10:
-                                {}
-                            </p>
-                            <p>
-                                NH3:
-                                {}
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                    );
+                })}
             </div>
         </div>
     );
