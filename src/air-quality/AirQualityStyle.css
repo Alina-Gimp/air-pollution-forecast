@@ -17,6 +17,7 @@
     padding: 2rem 0;
     margin-bottom: 10px;
     margin-right: 10px;
+
 }
 
 .components {
@@ -38,6 +39,7 @@
 .indexQuality {
     display: flex;
     justify-content: center;
+    font-size: 30px;
 }
 
 .header {
