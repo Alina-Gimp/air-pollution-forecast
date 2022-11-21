@@ -8,7 +8,8 @@ function AirQuality() {
 
     return (
         <div className="airQuality">
-            <h1 className="header">Ljubljana</h1>
+            <h1 className="header">Air pollution forecast for 5 days</h1>
+            <h3 className="city">Ljubljana</h3>
 
             <div className="blocks">
                 {forecastAirPollutions.map((forecastAirPollution) => {
@@ -22,49 +23,51 @@ function AirQuality() {
                             <p className="weekdayName">
                                 {displayData}
                             </p>
+
                             <div className="indexQuality">
                                 <DescriptionStatusAir
                                     statusAir={statusAir}
                                 />
-                            </div>
-                            <div className="components">
-                                <div className="components_1">
-                                    <p>
-                                        CO:
-                                        {pollution.co}
-                                    </p>
-                                    <p>
-                                        NO:
-                                        {pollution.no}
-                                    </p>
-                                    <p>
-                                        NO2:
-                                        {pollution.no2}
-                                    </p>
-                                    <p>
-                                        O3:
-                                        {pollution.o3}
-                                    </p>
+                                <div className="components">
+                                    <div className="components_1">
+                                        <p>
+                                            CO:
+                                            {pollution.co}
+                                        </p>
+                                        <p>
+                                            NO:
+                                            {pollution.no}
+                                        </p>
+                                        <p>
+                                            NO2:
+                                            {pollution.no2}
+                                        </p>
+                                        <p>
+                                            O3:
+                                            {pollution.o3}
+                                        </p>
+                                    </div>
+                                    <div className="components_2">
+                                        <p>
+                                            SO2:
+                                            {pollution.so2}
+                                        </p>
+                                        <p>
+                                            PM2.5:
+                                            {pollution.pm2_5}
+                                        </p>
+                                        <p>
+                                            PM10:
+                                            {pollution.pm10}
+                                        </p>
+                                        <p>
+                                            NH3:
+                                            {pollution.nh3}
+                                        </p>
+                                    </div>
                                 </div>
-                                <div className="components_2">
-                                    <p>
-                                        SO2:
-                                        {pollution.so2}
-                                    </p>
-                                    <p>
-                                        PM2.5:
-                                        {pollution.pm2_5}
-                                    </p>
-                                    <p>
-                                        PM10:
-                                        {pollution.pm10}
-                                    </p>
-                                    <p>
-                                        NH3:
-                                        {pollution.nh3}
-                                    </p>
-                                </div>
                             </div>
+
                         </div>
                     );
                 })}
