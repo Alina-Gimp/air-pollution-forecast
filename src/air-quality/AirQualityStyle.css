@@ -56,11 +56,41 @@
 }
 
 .city {
-    margin-left: 90px;
+    margin-left: 100px;
 }
 
 .weekdayName {
     text-align: start;
     padding-left: 9px;
+    font-size: 20px;
+}
 
+.pollutions {
+    text-align: right;
+    padding-right: 180px;
+    font-size: 18px;
+}
+
+.iconStatus {
+    height: 107px;
+    object-fit: cover;
+    margin-left: 30px;
+}
+
+.iconPollution {
+    height: 38px;
+    object-fit: cover;
+}
+
+.statusName {
+    margin-left: 10px;
+}
+
+.iconRecommendation {
+    height: 64px;
+    object-fit: cover;
+}
+
+.recommendation {
+    font-size: 12px;
 }
