@@ -13,59 +13,78 @@ import nh3 from './IconsAir/nh3.png';
 
 
 function AirQuality() {
-  const forecastAirPollutions = useGetAirPollutionData();
+    const forecastAirPollutions = useGetAirPollutionData();
 
-  return (
-    <div className="airQuality">
-      <h1 className="header">Air pollution forecast for 5 days</h1>
-      <h3 className="city">Ljubljana</h3>
+    return (
+        <div className="airQuality">
+            <h1 className="header">Air pollution forecast for 5 days</h1>
+            <div className="inputDiv"><input className="input" placeholder="Your city"/></div>
+            <h3 className="city">Ljubljana</h3>
+            <div className="blocks">
+                {forecastAirPollutions.map((forecastAirPollution) => {
+                    const displayData = new Date(forecastAirPollution.dt * 1000).toDateString();
+                    const pollution = forecastAirPollution.components;
+                    const statusAir = forecastAirPollution.main.aqi;
 
-      <div className="blocks">
-        {forecastAirPollutions.map((forecastAirPollution) => {
-          const displayData = new Date(forecastAirPollution.dt * 1000).toDateString();
-          const pollution = forecastAirPollution.components;
-          const statusAir = forecastAirPollution.main.aqi;
 
-          return (
+                    return (
 
-            <div className="block">
-              <div className="weekdayName">
-                {displayData}</div>
-                  <div className="pollutions">Pollutions, μg/m3:</div>
-              <div className="indexQuality">
-                <DescriptionStatusAir
-                  statusAir={statusAir}
-                />
-                <div className="components">
-                  <div className="components_1">
-                    <div><img className="iconPollution" src={co} alt="carbon monoxide" />
-                    {pollution.co}</div>
-                    <div><img className="iconPollution" src={no} alt="nitrogen monoxide" />
-                        {pollution.no}</div>
-                    <div><img className="iconPollution" src={no2} alt="nitrogen dioxide" />
-                        {pollution.no2}</div>
-                    <div><img className="iconPollution" src={o3} alt="ozone" />
-                        {pollution.o3}</div>
-                  </div>
-                  <div className="components_2">
-                    <div><img className="iconPollution" src={so2} alt="sulphur dioxide" />
-                        {pollution.so2}</div>
-                    <div><img className="iconPollution" src={pm2_5} alt="fine particles matter" />
-                        {pollution.pm2_5}</div>
-                    <div><img className="iconPollution" src={pm10} alt="coarse particulate matter" />
-                        {pollution.pm10}</div>
-                    <div><img className="iconPollution" src={nh3} alt="ammonia" />
-                        {pollution.nh3}</div>
-                  </div>
-                </div>
-              </div>
+                        <div className="block">
+                            <div className="weekdayName">
+                                {displayData}</div>
+                            <div className="pollutions">Pollutions, μg/m3:</div>
+                            <div className="indexQuality">
+                                <DescriptionStatusAir
+                                    statusAir={statusAir}
+                                />
+                                <div className="components">
+                                    <div className="components_1">
+                                        <div className="component">
+                                            <div><img className="iconPollution" src={co} alt="carbon monoxide"/></div>
+                                            <div className="concentration">{pollution.co}</div>
+                                        </div>
+                                        <div className="component">
+                                            <div><img className="iconPollution" src={no} alt="nitrogen monoxide"/></div>
+                                            <div className="concentration">{pollution.no}</div>
+                                        </div>
+                                        <div className="component">
+                                            <div><img className="iconPollution" src={no2} alt="nitrogen dioxide"/></div>
+                                            <div className="concentration">{pollution.no2}</div>
+                                        </div>
+                                        <div className="component">
+                                            <div><img className="iconPollution" src={o3} alt="ozone"/></div>
+                                            <div className="concentration">{pollution.o3}</div>
+                                        </div>
+                                    </div>
+                                    <div className="components_2">
+                                        <div className="component">
+                                            <div><img className="iconPollution" src={so2} alt="sulphur dioxide"/></div>
+                                            <div className="concentration">{pollution.so2}</div>
+                                        </div>
+                                        <div className="component">
+                                            <div><img className="iconPollution" src={pm2_5}
+                                                      alt="fine particles matter"/></div>
+                                            <div className="concentration">{pollution.pm2_5}</div>
+                                        </div>
+                                        <div className="component">
+                                            <div><img className="iconPollution" src={pm10}
+                                                      alt="coarse particulate matter"/></div>
+                                            <div className="concentration">{pollution.pm10}</div>
+                                        </div>
+                                        <div className="component">
+                                            <div><img className="iconPollution" src={nh3} alt="ammonia"/></div>
+                                            <div className="concentration">{pollution.nh3}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
+                        </div>
+                    );
+                })}
             </div>
-          );
-        })}
-      </div>
-    </div>
-  );
+        </div>
+    );
 }
 
 export default AirQuality;

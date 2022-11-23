@@ -1,10 +1,9 @@
+
+
 .blocks {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
-
-
 }
 
 .block {
@@ -28,6 +27,7 @@
     text-align: center;
     font-size: 12px;
     justify-content: end;
+    margin-right: 120px;
 }
 
 .components_1 {
@@ -56,25 +56,28 @@
 }
 
 .city {
-    margin-left: 100px;
+    margin-left: 160px;
 }
 
 .weekdayName {
     text-align: start;
     padding-left: 9px;
-    font-size: 20px;
+    font-size: 26px;
 }
 
 .pollutions {
     text-align: right;
-    padding-right: 180px;
-    font-size: 18px;
+    margin-right: 150px;
+    font-size: 22px;
+    margin-bottom: 5px;
+
 }
 
 .iconStatus {
     height: 107px;
     object-fit: cover;
     margin-left: 30px;
+    margin-top: 20px
 }
 
 .iconPollution {
@@ -83,14 +86,55 @@
 }
 
 .statusName {
-    margin-left: 10px;
+    margin-left: 15px;
 }
 
 .iconRecommendation {
     height: 64px;
     object-fit: cover;
+
 }
 
 .recommendation {
-    font-size: 12px;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 10px;
+
+}
+
+.blockRecommendation {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.blocksRecommendations {
+    margin-left: 150px;
+}
+
+.component {
+    display: flex;
+}
+
+.concentration {
+    margin-top: 12px;
+    margin-left: 10px;
+}
+
+.inputDiv {
+    display: flex;
+    justify-content: center;
+}
+
+.input {
+    background-color: lavender;
+    border: none;
+    border-radius: 0.4rem;
+    color: black;
+    height: 2rem;
+    outline: 0;
+    padding-inline-end: 44px;
+    padding-inline-start: 52px;
+    position: relative;
+    width: 20rem;
 }

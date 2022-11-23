@@ -9,102 +9,119 @@ import window from './IconsAir/window.png';
 import air_filter from './IconsAir/air_filter.png';
 
 
-function DescriptionStatusAir({statusAir}) {
+
+function DescriptionStatusAir({ statusAir }) {
     if (statusAir === 1) {
         return (
             <>
                 {' '}
-                <img className="iconStatus" src={good}/>
-                <p className="statusName" style={{color: '#3BD614'}}>Good</p>
-                <div>
-                    <div>
-                        <div><img className="iconRecommendation" src={trees}/></div>
-                        <div className="recommendation">Walk outdoors</div>
-                    </div>
-                    <div>
-                    <div><img className="iconRecommendation" src={open_windows}/></div>
-                    <div className="recommendation">Ventilate the house</div>
-                    </div>
-                </div>
-            </>
-        );
-    }
-
-    if (statusAir === 2) {
-        return (
-            <>
-                {' '}
-                <img className="iconStatus" src={good}/>
-                <p className="statusName" style={{color: '#4DAB2C'}}>Fair</p>
-                <div>
-                    <div>
-                    <div><img className="iconRecommendation" src={trees}/></div>
-                    <div className="recommendation">Walk outdoors</div>
-                    </div>
-                    <div>
-                    <div><img className="iconRecommendation" src={open_windows}/></div>
-                    <div className="recommendation">Ventilate the house</div>
-                    </div>
-                </div>
-            </>
-        );
-    }
-
-    if (statusAir === 3) {
-        return (
-            <>
-                {' '}
-                <img className="iconStatus" src={good}/>
-                <p className="statusName" style={{color: '#7EBD18'}}>Moderate</p>
-                <div>
-                    <div><img className="iconRecommendation" src={trees}/></div>
-                    <div className="recommendation">Walk outdoors</div>
-                    <div><img className="iconRecommendation" src={open_windows}/></div>
-                    <div className="recommendation">Ventilate the house</div>
-                </div>
-            </>
-        );
-    }
-
-    if (statusAir === 4) {
-        return (
-            <>
-                {' '}
-                <img className="iconStatus" src={poor}/>
-                <p className="statusName" style={{color: '#BD9918'}}>Poor</p>
-                <div>
-                    <div><img className="iconRecommendation" src={mask}/></div>
-                    <div className="recommendation">Wear a mask</div>
-                    <div><img className="iconRecommendation" src={window}/></div>
-                    <div className="recommendation">Close windows</div>
-                    <div><img className="iconRecommendation" src={air_filter}/></div>
-                    <div className="recommendation">Use an air purifier</div>
-                </div>
-            </>
-        );
-    }
-
-    if (statusAir === 5) {
-        return (
-            <>
-        {' '}
-            <img className="iconStatus" src={poor}/>
-            <p className="statusName" style={{color: '#BD3518'}}>Very Poor</p>
-            <div>
-                <div><img className="iconRecommendation" src={mask}/></div>
-                <div className="recommendation">Wear a mask</div>
-                <div><img className="iconRecommendation" src={window}/></div>
-                <div className="recommendation">Close windows</div>
-                <div><img className="iconRecommendation" src={air_filter}/></div>
-                <div className="recommendation">Use an air purifier</div>
-            </div>
-            </>
-        );
-    }
-
-    return (
-        {statusAir}
+                <img className="iconStatus" src={good} />
+                <p className="statusName" style={{ color: '#3BD614' }}>Good</p>
+                <div className="blocksRecommendations">
+                    <div className="blockRecommendation">
+            <div><img className="iconRecommendation" src={trees} /></div>
+            <div className="recommendation">Walk outdoors</div>
+          </div>
+          <div className="blockRecommendation">
+            <div><img className="iconRecommendation" src={open_windows} /></div>
+            <div className="recommendation">Ventilate the house</div>
+          </div>
+        </div>
+      </>
     );
+  }
+
+  if (statusAir === 2) {
+    return (
+      <>
+        {' '}
+        <img className="iconStatus" src={good} />
+        <p className="statusName" style={{ color: '#4DAB2C' }}>Fair</p>
+        <div className="blocksRecommendations">
+          <div className="blockRecommendation">
+            <div><img className="iconRecommendation" src={trees} /></div>
+            <div className="recommendation">Walk outdoors</div>
+          </div>
+          <div className="blockRecommendation">
+            <div><img className="iconRecommendation" src={open_windows} /></div>
+            <div className="recommendation">Ventilate the house</div>
+          </div>
+        </div>
+      </>
+    );
+  }
+
+  if (statusAir === 3) {
+    return (
+      <>
+        {' '}
+        <img className="iconStatus" src={good} />
+        <p className="statusName" style={{ color: '#7EBD18' }}>Moderate</p>
+        <div className="blocksRecommendations">
+          <div className="blockRecommendation">
+            <div><img className="iconRecommendation" src={trees} /></div>
+            <div className="recommendation">Walk outdoors</div>
+          </div>
+          <div className="blockRecommendation">
+            <div><img className="iconRecommendation" src={open_windows} /></div>
+            <div className="recommendation">Ventilate the house</div>
+          </div>
+        </div>
+      </>
+    );
+  }
+
+  if (statusAir === 4) {
+    return (
+      <>
+        {' '}
+        <img className="iconStatus" src={poor} />
+        <p className="statusName" style={{ color: '#BD9918' }}>Poor</p>
+        <div className="blocksRecommendations">
+          <div className="blockRecommendation">
+            <div><img className="iconRecommendation" src={mask} /></div>
+            <div className="recommendation">Wear a mask</div>
+          </div>
+          <div className="blockRecommendation">
+            <div><img className="iconRecommendation" src={window} /></div>
+            <div className="recommendation">Close windows</div>
+          </div>
+          <div className="blockRecommendation">
+            <div><img className="iconRecommendation" src={air_filter} /></div>
+            <div className="recommendation">Use an air purifier</div>
+          </div>
+        </div>
+      </>
+    );
+  }
+
+  if (statusAir === 5) {
+    return (
+      <>
+        {' '}
+        <img className="iconStatus" src={poor} />
+        <p className="statusName" style={{ color: '#BD3518' }}>Very Poor</p>
+        <div className="blocksRecommendations">
+          <div className="blockRecommendation">
+            <div><img className="iconRecommendation" src={mask} /></div>
+            <div className="recommendation">Wear a mask</div>
+          </div>
+          <div className="blockRecommendation">
+            <div><img className="iconRecommendation" src={window} /></div>
+            <div className="recommendation">Close windows</div>
+          </div>
+          <div className="blockRecommendation">
+            <div><img className="iconRecommendation" src={air_filter} /></div>
+            <div className="recommendation">Use an air purifier</div>
+          </div>
+        </div>
+      </>
+    );
+  }
+
+  return (
+    { statusAir }
+  );
 }
 
 export default DescriptionStatusAir;
