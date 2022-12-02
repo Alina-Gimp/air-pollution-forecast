@@ -65,8 +65,6 @@ function AirQuality() {
         forShow.push({date: key, pollution: oneDaySum});
     })
 
-    console.log(forShow);
-
     return (
         <div className="airQuality">
             <h1 className="header">Air pollution forecast</h1>

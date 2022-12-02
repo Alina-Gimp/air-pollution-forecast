@@ -138,3 +138,15 @@
     position: relative;
     width: 20rem;
 }
+
+.infoStatus {
+    display: flex;
+}
+
+.info {
+    margin-left: auto;
+}
+
+.infoIcon {
+    margin-top: 10px;
+}
