@@ -61,7 +61,7 @@ function AirQuality() {
         oneDaySum.pm2_5 = Number(oneDaySum.pm2_5 / value.length).toFixed(1);
         oneDaySum.pm10 = Number(oneDaySum.pm10 / value.length).toFixed(1);
         oneDaySum.nh3 = Number(oneDaySum.nh3 / value.length).toFixed(1);
-        oneDaySum.aqi = Number(oneDaySum.aqi / value.length);
+        oneDaySum.aqi = Number(oneDaySum.aqi / value.length)
 
         forShow.push({date: key, pollution: oneDaySum});
     });
