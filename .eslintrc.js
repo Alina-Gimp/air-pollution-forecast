@@ -23,6 +23,7 @@ module.exports = {
     "no-use-before-define": "off",
     "no-param-reassign": "off",
     "jsx-a11y/label-has-associated-control": "off",
+    "no-shadow": "off",
   },
 
 
