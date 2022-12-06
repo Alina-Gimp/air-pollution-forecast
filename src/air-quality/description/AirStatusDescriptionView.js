@@ -4,7 +4,7 @@ import information from '../IconsAir/information.png';
 
 function AirStatusDescriptionView({ description }) {
     return (
-      <div style={{flex: 1, display: "flex"}}>
+      <div className="descriptionDiv">
         <img
           className="iconStatus"
           src={description.icon}

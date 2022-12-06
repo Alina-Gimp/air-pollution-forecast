@@ -10,7 +10,10 @@ import nh3 from "./IconsAir/nh3.png";
 
 function Pollution({ index, pollution }) {
     return (
+      <>
         <div className="components">
+            <div className="pollutions">Pollutions, μg/m3:</div>
+            <div className="components_1_2">
             <div className="components_1">
                 <div className="component">
                     <div><img className="iconPollution" src={co} alt="Carbon monoxide(CO)"
@@ -67,7 +70,9 @@ function Pollution({ index, pollution }) {
                     <div className="concentration" key={index}>{pollution.nh3}</div>
                 </div>
             </div>
+            </div>
         </div>
+      </>
     )
 }
 

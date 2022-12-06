@@ -114,7 +114,7 @@ const AirQualityDescriptionEnum = {
                 text: "Use an air purifier"
             }
         ]
-}
+    }
 
 }
 

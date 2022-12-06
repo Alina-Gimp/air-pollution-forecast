@@ -2,7 +2,7 @@ import React from 'react';
 
 function RecommendationView({ recommendations }) {
     return (
-        <div style={{flex: 1}}>
+        <div className="recommendationDiv" style={{flex: 1}}>
             <div className="blocksRecommendations">
                 {
                     recommendations.map(recommendation => (
@@ -14,7 +14,7 @@ function RecommendationView({ recommendations }) {
                                     alt={recommendation.alt}
                                 />
                             </div>
-                            <div className="recommendation">{recommendation.text}</div>
+                          <div className="recommendation"><p className="recommendationText">{recommendation.text}</p></div>
                         </div>
                     ))
                 }

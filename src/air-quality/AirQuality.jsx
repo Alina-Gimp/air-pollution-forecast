@@ -1,17 +1,12 @@
 import React from 'react';
 import './AirQualityStyle.css';
 import useGetAirPollutionData from './hook/useGetAirPollutionData';
-import AirStatusDescription from './AirStatusDescription';
 import FaqComponent from './FaqComponent';
-import Recommendation from "./Recommendation";
 import Pollution from "./Pollution";
-import * as PropTypes from "prop-types";
-
-function DateView(props) {
-    return null;
-}
-
-DateView.propTypes = {date: PropTypes.any};
+import DateView from "./DateView";
+import {mapQualityNumberToDescriptionElement} from "./description/AirQualityMapper";
+import RecommendationView from "./recommendation/RecommendationView";
+import AirStatusDescriptionView from "./description/AirStatusDescriptionView";
 
 function AirQuality() {
     const forecastAirPollutions = useGetAirPollutionData();
@@ -81,7 +76,7 @@ function AirQuality() {
                               */
                     const {pollution} = pollutionOn;
                     const {date} = pollutionOn;
-                    const statusAir = pollution.aqi;
+                    const statusAir = Math.round(pollution.aqi);
 
                     return (
 
@@ -90,11 +85,11 @@ function AirQuality() {
                                 date={date}
                             />
                             <div className="indexQuality">
-                                <AirStatusDescription
-                                    statusAir={statusAir}
+                                <AirStatusDescriptionView
+                                    description={mapQualityNumberToDescriptionElement(statusAir)}
                                 />
-                                <Recommendation
-                                    statusAir={statusAir}
+                                <RecommendationView
+                                  recommendations={mapQualityNumberToDescriptionElement(statusAir).recommendations}
                                 />
                                 <Pollution
                                     index={index}
@@ -106,12 +101,7 @@ function AirQuality() {
                     );
                 })}
             </div>
-            <div className="divFaq">
-                <h2 className="faq">FAQ</h2>
-            </div>
-            <div>
-                <FaqComponent/>
-            </div>
+            <FaqComponent/>
             <div className="footer"></div>
         </div>
     );
