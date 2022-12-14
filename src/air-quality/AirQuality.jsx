@@ -12,13 +12,9 @@ import useGetCoordinatesByAddressName from "./hook/useGetCoordinatesByAddressNam
 
 function AirQuality() {
   const [city, setCity] = useState();
-  const [isCityLoaded, setCityLoaded] = useState(false);
-
-  console.log("city: " + isCityLoaded)
 
   const addresses = useGetCoordinatesByAddressName(city);
   const firstAddress = !!addresses && addresses.length > 0 && addresses[0] || {};
-  console.log(firstAddress)
 
   const forecastAirPollutions = useGetAirPollutionData(firstAddress.coordinates);
   console.log(forecastAirPollutions);
@@ -73,6 +69,7 @@ function AirQuality() {
     forShow.push({ date: key, pollution: oneDaySum });
   });
 
+
   return (
     <div className="airQuality">
       <h1 className="header">Air pollution forecast</h1>
@@ -83,7 +80,7 @@ function AirQuality() {
           />
         </div>
       </div>
-      <h3 className="city">{firstAddress.name || "N/A"}</h3>
+      <h3 className="city">Forecast in the: {firstAddress.name}</h3>
       <div className="blocks">
         {forShow.map((pollutionOn, index) => {
           /* const displayData = new Date(forecastAirPollution.dt * 1000).toDateString();
@@ -118,7 +115,6 @@ function AirQuality() {
         })}
       </div>
       <FaqComponent />
-      <div className="footer" />
     </div>
   );
 }

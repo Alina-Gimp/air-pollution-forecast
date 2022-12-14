@@ -17,6 +17,7 @@ function FaqComponent() {
 
   return (
     <>
+      <div className="faqSpace">
       <div className="divFaq">
         <h2 className="faq">FAQ</h2>
       </div>
@@ -46,6 +47,7 @@ function FaqComponent() {
             </button>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

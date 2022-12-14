@@ -4,8 +4,10 @@ function InputCity({saveCity}) {
   const [currentCity, setCurrentCity] = useState('');
 
   function handleChange(event) {
-    setCurrentCity(event.target.value);
+    setCurrentCity(event.target.value.replace(/[^A-Za-z]/ig, ''));
   }
+
+
 
   function handleButtonClick() {
     if (currentCity.trim() === '') return;
@@ -20,14 +22,17 @@ function InputCity({saveCity}) {
     <div className="buttonAndInput">
       <div className="inputDiv">
         <input
-          placeholder="Your city"
+          id="autocomplete"
+          className="input"
+          placeholder="Enter city"
           value={currentCity}
           onChange={handleChange}
           onKeyPress={handleKeyPress}
+          title="Only latin letters"
         />
       </div>
-      <div>
-        <button onClick={handleButtonClick}>Search</button>
+      <div className="buttonDiv">
+        <button className="button" onClick={handleButtonClick}>Search</button>
       </div>
     </div>
 

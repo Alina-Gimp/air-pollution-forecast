@@ -6,7 +6,7 @@ function useGetCoordinatesByAddressName(address) {
 
   useEffect(() => {
     if (!!address) {
-      fetch('https://api.opencagedata.com/geocode/v1/json?key=' + KEY.COORDINATES + "&q=" + address)
+      fetch('https://api.opencagedata.com/geocode/v1/json?key=' + KEY.COORDINATES + "&q=" + address + "&language=en")
         .then((response) => response.json())
         .then((data) => {
           const results = data.results;
