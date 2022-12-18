@@ -1,56 +1,43 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { FiPlus } from 'react-icons/fi';
+import React from 'react';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-function FaqComponent() {
-  const [active, setActive] = useState(false);
-  const contentRef = useRef(null);
-
-  useEffect(() => {
-    contentRef.current.style.maxHeight = active
-      ? `${contentRef.current.scrollHeight}px`
-      : '0px';
-  }, [contentRef, active]);
-
-  const toggleAccordion = () => {
-    setActive(!active);
-  };
-
+ function SimpleAccordion() {
   return (
-    <>
-      <div className="faqSpace">
-      <div className="divFaq">
-        <h2 className="faq">FAQ</h2>
-      </div>
-      <div>
-        <div className="faqComponent">
-          <div>
-            <button
-              className={`question-section ${active}`}
-              onClick={toggleAccordion}
-            >
-              <div>
-                <div className="questionDiv">
-                  <p className="question">
-                    How the air quality index is calculated?
-                  </p>
-                  <FiPlus
-                    className={active ? 'question-icon rotate' : 'question-icon'}
-                  />
-                </div>
-                <div
-                  ref={contentRef}
-                  className={active ? 'answer answer-divider' : 'answer'}
-                >
-                  <p className="answerStyle">Air pollution indicators are average values that have been calculated from data for each hour of the day.</p>
-                </div>
-              </div>
-            </button>
-          </div>
-        </div>
-      </div>
-      </div>
-    </>
+    <div>
+      <h3 className="faq">FAQ</h3>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography><h4>How are air pollution indicators calculated?</h4></Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Indicators display the average value per day.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel2a-content"
+          id="panel2a-header"
+        >
+          <Typography><h4>Why is it important to monitor air quality?</h4></Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Air quality directly affects health. If regularly breathe polluted air, diseases of the cardiovascular, respiratory and nervous systems can exacerbate, the risk of diabetes and cancer increases.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+    </div>
   );
 }
-
-export default FaqComponent;
+export default SimpleAccordion;

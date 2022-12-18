@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './AirQualityStyle.css';
 import useGetAirPollutionData from './hook/useGetAirPollutionData';
-import FaqComponent from './FaqComponent';
+import SimpleAccordion from './FaqComponent';
 import Pollution from './Pollution';
 import DateView from './DateView';
 import { mapQualityNumberToDescriptionElement } from './description/AirQualityMapper';
@@ -10,6 +10,7 @@ import AirStatusDescriptionView from './description/AirStatusDescriptionView';
 import InputCity from './InputCity';
 import useGetCoordinatesByAddressName from "./hook/useGetCoordinatesByAddressName";
 
+
 function AirQuality() {
   const [city, setCity] = useState();
 
@@ -17,7 +18,6 @@ function AirQuality() {
   const firstAddress = !!addresses && addresses.length > 0 && addresses[0] || {};
 
   const forecastAirPollutions = useGetAirPollutionData(firstAddress.coordinates);
-  console.log(forecastAirPollutions);
 
   const result = new Map();
   forecastAirPollutions.forEach((forecast) => {
@@ -80,7 +80,7 @@ function AirQuality() {
           />
         </div>
       </div>
-      <h3 className="city">Forecast in the: {firstAddress.name}</h3>
+      <h3 className="city">{firstAddress.name}</h3>
       <div className="blocks">
         {forShow.map((pollutionOn, index) => {
           /* const displayData = new Date(forecastAirPollution.dt * 1000).toDateString();
@@ -114,7 +114,7 @@ function AirQuality() {
           );
         })}
       </div>
-      <FaqComponent />
+      <SimpleAccordion />
     </div>
   );
 }

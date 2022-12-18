@@ -4,9 +4,8 @@ function InputCity({saveCity}) {
   const [currentCity, setCurrentCity] = useState('');
 
   function handleChange(event) {
-    setCurrentCity(event.target.value.replace(/[^A-Za-z]/ig, ''));
+    setCurrentCity(event.target.value);
   }
-
 
 
   function handleButtonClick() {
@@ -22,7 +21,6 @@ function InputCity({saveCity}) {
     <div className="buttonAndInput">
       <div className="inputDiv">
         <input
-          id="autocomplete"
           className="input"
           placeholder="Enter city"
           value={currentCity}
