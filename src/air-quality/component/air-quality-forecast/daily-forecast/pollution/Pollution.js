@@ -1,14 +1,20 @@
 import React from 'react';
-import co from '../IconsAir/co.png';
-import no from '../IconsAir/no.png';
-import no2 from '../IconsAir/no2.png';
-import o3 from '../IconsAir/o3.png';
-import so2 from '../IconsAir/so2.png';
-import pm2_5 from '../IconsAir/pm2_5.png';
-import pm10 from '../IconsAir/pm10.png';
-import nh3 from '../IconsAir/nh3.png';
+import co from './pollution-icons/co.png';
+import no from './pollution-icons/no.png';
+import no2 from './pollution-icons/no2.png';
+import o3 from './pollution-icons/o3.png';
+import so2 from './pollution-icons/so2.png';
+import pm2_5 from './pollution-icons/pm2_5.png';
+import pm10 from './pollution-icons/pm10.png';
+import nh3 from './pollution-icons/nh3.png';
+import PollutionElement from "./PollutionElement";
 
-function Pollution({ index, pollution }) {
+function Pollution({pollution}) {
+  const {
+    co: carbonMonoxide = 0,
+    no: nitrogenMonoxide = 0,
+  } = pollution;
+
   return (
     <div className="components">
       <div className="pollutions"><p className="">Pollutions, μg/m3:</p></div>
@@ -23,19 +29,13 @@ function Pollution({ index, pollution }) {
                 title="Carbon monoxide (CO)"
               />
             </div>
-            <div className="concentration" key={index}>{pollution.co}</div>
+            <div className="concentration">{carbonMonoxide}</div>
           </div>
-          <div className="component">
-            <div>
-              <img
-                className="iconPollution"
-                src={no}
-                alt="Nitrogen monoxide(NO)"
-                title="Nitrogen monoxide (NO)"
-              />
-            </div>
-            <div className="concentration" key={index}>{pollution.no}</div>
-          </div>
+          <PollutionElement
+            name="Nitrogen monoxide(NO)"
+            value={nitrogenMonoxide}
+            icon={no}
+          />
           <div className="component">
             <div>
               <img
@@ -45,7 +45,7 @@ function Pollution({ index, pollution }) {
                 title="Nitrogen dioxide (NO2)"
               />
             </div>
-            <div className="concentration" key={index}>{pollution.no2}</div>
+            <div className="concentration">{pollution.no2}</div>
           </div>
           <div className="component">
             <div>
@@ -56,7 +56,7 @@ function Pollution({ index, pollution }) {
                 title="Ozone (O3)"
               />
             </div>
-            <div className="concentration" key={index}>{pollution.o3}</div>
+            <div className="concentration">{pollution.o3}</div>
           </div>
         </div>
         <div className="components_2">
@@ -69,7 +69,7 @@ function Pollution({ index, pollution }) {
                 title="Sulphur dioxide (SO2)"
               />
             </div>
-            <div className="concentration" key={index}>{pollution.so2}</div>
+            <div className="concentration">{pollution.so2}</div>
           </div>
           <div className="component">
             <div>
@@ -80,7 +80,7 @@ function Pollution({ index, pollution }) {
                 title="Fine particles matter (PM2.5)"
               />
             </div>
-            <div className="concentration" key={index}>{pollution.pm2_5}</div>
+            <div className="concentration">{pollution.pm2_5}</div>
           </div>
           <div className="component">
             <div>
@@ -91,7 +91,7 @@ function Pollution({ index, pollution }) {
                 title="Coarse particulate matter (PM10)"
               />
             </div>
-            <div className="concentration" key={index}>{pollution.pm10}</div>
+            <div className="concentration">{pollution.pm10}</div>
           </div>
           <div className="component">
             <div>
@@ -102,7 +102,7 @@ function Pollution({ index, pollution }) {
                 title="Ammonia (NH3)"
               />
             </div>
-            <div className="concentration" key={index}>{pollution.nh3}</div>
+            <div className="concentration">{pollution.nh3}</div>
           </div>
         </div>
       </div>

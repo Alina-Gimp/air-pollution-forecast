@@ -1,6 +1,6 @@
 import React from 'react';
-import '../AirQualityStyle.css';
-import information from '../IconsAir/information.png';
+import '../../../../styles/AirQualityStyle.css';
+import information from '../pollution/pollution-icons/information.png';
 
 function AirStatusDescriptionView({ description }) {
   return (

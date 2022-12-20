@@ -1,6 +1,6 @@
 import ApplicationModes from './settings/ApplicationModes';
 
-const mode = ApplicationModes.MOCK;
+const mode = ApplicationModes.DEV;
 
 const isMock = () => mode === ApplicationModes.MOCK;
 const isDev = () => mode === ApplicationModes.DEV;

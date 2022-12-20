@@ -1,12 +1,12 @@
-import goodAir from '../IconsAir/goodAir.png';
-import poorAir from '../IconsAir/poorAir.png';
-import trees from '../IconsAir/trees.png';
-import openWindows from '../IconsAir/openWindows.png';
-import mask from '../IconsAir/mask.png';
-import window from '../IconsAir/window.png';
-import airFilter from '../IconsAir/airFilter.png';
+import goodAir from '../component/air-quality-forecast/daily-forecast/pollution/pollution-icons/goodAir.png';
+import poorAir from '../component/air-quality-forecast/daily-forecast/pollution/pollution-icons/poorAir.png';
+import trees from '../component/air-quality-forecast/daily-forecast/pollution/pollution-icons/trees.png';
+import openWindows from '../component/air-quality-forecast/daily-forecast/pollution/pollution-icons/openWindows.png';
+import mask from '../component/air-quality-forecast/daily-forecast/pollution/pollution-icons/mask.png';
+import window from '../component/air-quality-forecast/daily-forecast/pollution/pollution-icons/window.png';
+import airFilter from '../component/air-quality-forecast/daily-forecast/pollution/pollution-icons/airFilter.png';
 
-const AirQualityDescriptionEnum = {
+const AirQualityStatusEnum = {
   GOOD: {
     name: 'Good',
     icon: goodAir,
@@ -118,4 +118,4 @@ const AirQualityDescriptionEnum = {
 
 };
 
-export default AirQualityDescriptionEnum;
+export default AirQualityStatusEnum;

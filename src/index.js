@@ -4,18 +4,12 @@ import './index.css';
 import {BrowserRouter} from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import App from './App';
-import {DevSupport} from "@react-buddy/ide-toolbox";
-import {ComponentPreviews, useInitial} from "./dev";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <DevSupport ComponentPreviews={ComponentPreviews}
-                  useInitialHook={useInitial}
-      >
-        <App/>
-      </DevSupport>
+      <App/>
     </BrowserRouter>
   </React.StrictMode>,
 );
