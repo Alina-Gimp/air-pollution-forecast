@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 
 function InputCity({saveCity, confirmCity, datalist}) {
   const [currentCity, setCurrentCity] = useState('');
@@ -31,7 +31,7 @@ function InputCity({saveCity, confirmCity, datalist}) {
         />
         <datalist id="data">
           {datalist.map((item, index) =>
-            <option key={index} value={item} />
+            <option key={index} value={item}/>
           )}
         </datalist>
       </div>
@@ -42,4 +42,5 @@ function InputCity({saveCity, confirmCity, datalist}) {
 
   );
 }
+
 export default InputCity;
