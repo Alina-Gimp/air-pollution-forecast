@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 
-function InputCity({saveCity}) {
+function InputCity({saveCity, confirmCity, datalist}) {
   const [currentCity, setCurrentCity] = useState('');
 
   function handleChange(event) {
     setCurrentCity(event.target.value);
+    saveCity(event.target.value);
+    confirmCity(false);
   }
-
 
   function handleButtonClick() {
     if (currentCity.trim() === '') return;
-    saveCity(currentCity);
+    confirmCity(true);
   }
 
   function handleKeyPress(e) {
@@ -26,8 +27,13 @@ function InputCity({saveCity}) {
           value={currentCity}
           onChange={handleChange}
           onKeyPress={handleKeyPress}
-          title="Only latin letters"
+          list="data"
         />
+        <datalist id="data">
+          {datalist.map((item, index) =>
+            <option key={index} value={item} />
+          )}
+        </datalist>
       </div>
       <div className="buttonDiv">
         <button className="button" onClick={handleButtonClick}>Search</button>

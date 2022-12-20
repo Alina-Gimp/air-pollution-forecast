@@ -15,7 +15,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography><h4>How are air pollution indicators calculated?</h4></Typography>
+          <Typography style={{fontWeight: "bold"}}>How are air pollution indicators calculated?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -29,7 +29,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography><h4>Why is it important to monitor air quality?</h4></Typography>
+          <Typography style={{fontWeight: "bold"}}>Why is it important to monitor air quality?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>

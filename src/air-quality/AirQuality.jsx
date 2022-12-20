@@ -1,23 +1,29 @@
 import React, {useState} from 'react';
 import './AirQualityStyle.css';
 import useGetAirPollutionData from './hook/useGetAirPollutionData';
-import SimpleAccordion from './FaqComponent';
-import Pollution from './Pollution';
-import DateView from './DateView';
+import SimpleAccordion from './faqComponent/FaqComponent';
+import Pollution from './pollution/Pollution';
+import DateView from './dateView/DateView';
 import { mapQualityNumberToDescriptionElement } from './description/AirQualityMapper';
 import RecommendationView from './recommendation/RecommendationView';
 import AirStatusDescriptionView from './description/AirStatusDescriptionView';
-import InputCity from './InputCity';
+import InputCity from './inputCity/InputCity';
 import useGetCoordinatesByAddressName from "./hook/useGetCoordinatesByAddressName";
 
 
 function AirQuality() {
-  const [city, setCity] = useState();
+  const [city, setCity] = useState("");
+  const [isCityConfirmed, setCityConfirmed] = useState(false);
 
   const addresses = useGetCoordinatesByAddressName(city);
+  console.log(addresses);
   const firstAddress = !!addresses && addresses.length > 0 && addresses[0] || {};
+  const displayAddress = isCityConfirmed ? firstAddress.name : "";
 
-  const forecastAirPollutions = useGetAirPollutionData(firstAddress.coordinates);
+  const suggestions = addresses && addresses.map(address => address.name) || [];
+  console.log(suggestions);
+
+  const forecastAirPollutions = useGetAirPollutionData(firstAddress.coordinates, isCityConfirmed);
 
   const result = new Map();
   forecastAirPollutions.forEach((forecast) => {
@@ -77,16 +83,14 @@ function AirQuality() {
         <div className="inputDiv">
           <InputCity
               saveCity={setCity}
+              confirmCity={setCityConfirmed}
+              datalist={suggestions}
           />
         </div>
       </div>
-      <h3 className="city">{firstAddress.name}</h3>
+      <h3 className="city">{displayAddress}</h3>
       <div className="blocks">
         {forShow.map((pollutionOn, index) => {
-          /* const displayData = new Date(forecastAirPollution.dt * 1000).toDateString();
-                              const pollution = forecastAirPollution.components;
-                              const statusAir = forecastAirPollution.main.aqi;
-                              */
           const { pollution } = pollutionOn;
           const { date } = pollutionOn;
           const statusAir = Math.round(pollution.aqi);

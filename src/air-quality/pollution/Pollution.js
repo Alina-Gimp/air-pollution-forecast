@@ -1,12 +1,12 @@
 import React from 'react';
-import co from './IconsAir/co.png';
-import no from './IconsAir/no.png';
-import no2 from './IconsAir/no2.png';
-import o3 from './IconsAir/o3.png';
-import so2 from './IconsAir/so2.png';
-import pm2_5 from './IconsAir/pm2_5.png';
-import pm10 from './IconsAir/pm10.png';
-import nh3 from './IconsAir/nh3.png';
+import co from '../IconsAir/co.png';
+import no from '../IconsAir/no.png';
+import no2 from '../IconsAir/no2.png';
+import o3 from '../IconsAir/o3.png';
+import so2 from '../IconsAir/so2.png';
+import pm2_5 from '../IconsAir/pm2_5.png';
+import pm10 from '../IconsAir/pm10.png';
+import nh3 from '../IconsAir/nh3.png';
 
 function Pollution({ index, pollution }) {
   return (

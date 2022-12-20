@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import KEY from '../KEY';
 
-function useGetAirPollutionData(address = {}) {
+function useGetAirPollutionData(address = {}, isCityConfirmed) {
   const [forecastAirPollutions, setForecastAirPollutions] = useState([]);
 
   const {
@@ -9,17 +9,15 @@ function useGetAirPollutionData(address = {}) {
     lng = 0,
   } = address;
 
-
-
   useEffect(() => {
-    if (lat !== 0 && lng !== 0) {
+    if (isCityConfirmed && lat !== 0 && lng !== 0) {
       fetch("https://api.openweathermap.org/data/2.5/air_pollution/forecast?lat=" + lat + "&lon=" + lng + "&appid=" + KEY.POLLUTION)
         .then((response) => response.json())
         .then((data) => {
           setForecastAirPollutions(data.list);
         });
     }
-  }, [lat, lng]);
+  }, [lat, lng, isCityConfirmed]);
 
   return forecastAirPollutions;
 }
