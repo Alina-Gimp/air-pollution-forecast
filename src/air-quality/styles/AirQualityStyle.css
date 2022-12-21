@@ -84,6 +84,7 @@
 
 .statusName {
     margin-left: 15px;
+
 }
 
 .iconRecommendation {
@@ -190,4 +191,8 @@
     text-align: center;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.Typography {
+    font-weight: bold;
 }

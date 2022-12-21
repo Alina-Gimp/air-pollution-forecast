@@ -15,7 +15,7 @@ function Faq() {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography style={{fontWeight: "bold"}}>How are air pollution indicators calculated?</Typography>
+          <Typography>How are air pollution indicators calculated?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -29,7 +29,7 @@ function Faq() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography style={{fontWeight: "bold"}}>Why is it important to monitor air quality?</Typography>
+          <Typography className="typography">Why is it important to monitor air quality?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
