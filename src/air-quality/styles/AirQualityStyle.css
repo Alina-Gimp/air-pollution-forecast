@@ -193,6 +193,39 @@
     cursor: pointer;
 }
 
-.Typography {
-    font-weight: bold;
+.footer {
+    background-color: lavender;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
 }
+
+.main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.top {
+    flex-grow: 1;
+    width: 100%;
+}
+
+
+.contactIcons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.linkedin {
+    margin-left: 5px;
+}
+
+.github {
+    margin-right: 5px;
+}
+
+

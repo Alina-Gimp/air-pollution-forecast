@@ -12,7 +12,7 @@ const AirQualityStatusEnum = {
     icon: goodAir,
     color: '#3BD614',
     alt: 'icon: fresh air',
-    hint: 'Fresh air',
+    title: 'Fresh air',
     recommendations: [
       {
         icon: trees,
@@ -31,7 +31,7 @@ const AirQualityStatusEnum = {
     icon: goodAir,
     color: '#4DAB2C',
     alt: 'icon: fresh air',
-    hint: 'Sensitive people may need a mask',
+    title: 'Sensitive people may need a mask',
     recommendations: [
       {
         icon: trees,
@@ -51,7 +51,7 @@ const AirQualityStatusEnum = {
     icon: goodAir,
     color: '#7EBD18',
     alt: 'icon: fresh air',
-    hint: 'Sensitive people may need a mask',
+    title: 'Sensitive people may need a mask',
     recommendations: [
       {
         icon: trees,
@@ -71,7 +71,7 @@ const AirQualityStatusEnum = {
     icon: poorAir,
     color: '#BD9918',
     alt: 'icon: poor air',
-    hint: 'The air is unhealthy',
+    title: 'The air is unhealthy',
     recommendations: [
       {
         icon: mask,
@@ -96,7 +96,7 @@ const AirQualityStatusEnum = {
     icon: poorAir,
     color: '#BD3518',
     alt: 'icon: poor air',
-    hint: 'Air is dangerous for health',
+    title: 'Air is dangerous for health',
     recommendations: [
       {
         icon: mask,

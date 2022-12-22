@@ -22,7 +22,8 @@ function AirQuality() {
   const suggestions = mapLocationApiToSuggestedCities(geolocationApiResponse);
 
   return (
-    <>
+    <div className="main">
+      <div className="top">
       <Header />
       <CitySearch
         saveCity={setCity}
@@ -35,8 +36,9 @@ function AirQuality() {
         isCityConfirmed={isCityConfirmed}
       />
       <Faq />
+      </div>
       <Footer />
-    </>
+    </div>
   );
 }
 
