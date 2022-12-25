@@ -84,13 +84,11 @@
 
 .statusName {
     margin-left: 15px;
-
 }
 
 .iconRecommendation {
     height: 64px;
-    object-fit: cover;
-
+    object-fit: cover
 }
 
 .recommendation {
@@ -104,7 +102,6 @@
 .blockRecommendation {
     display: flex;
     flex-direction: row;
-
 }
 
 .blocksRecommendations {
