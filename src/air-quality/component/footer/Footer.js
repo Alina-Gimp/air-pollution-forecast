@@ -19,7 +19,6 @@ function Footer() {
             </a>
             </div>
           </div>
-          <h3>Contact</h3>
           <p>Support: email@.com</p>
         </div>
       </div>

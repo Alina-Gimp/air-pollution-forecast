@@ -35,8 +35,8 @@ function AirQuality() {
         coordinates={coordinates}
         isCityConfirmed={isCityConfirmed}
       />
-      <Faq />
       </div>
+      <Faq />
       <Footer />
     </div>
   );
