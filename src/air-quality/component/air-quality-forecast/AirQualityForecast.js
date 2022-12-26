@@ -9,7 +9,7 @@ function AirQualityForecast({displayAddress, coordinates, isCityConfirmed}) {
 
   return (
     <>
-      <h3 className="city">{displayAddress}</h3>
+      <h2 className="city">{displayAddress}</h2>
       <div className="blocks">
         {
           airQualityApiDailyAverageSummary.map((dailyAverages, index) => (

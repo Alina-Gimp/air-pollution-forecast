@@ -19,7 +19,9 @@ function Footer() {
             </a>
             </div>
           </div>
-          <p>Support: email@.com</p>
+          <p>
+          <a href="mailto:support@air-forecast.com">support@air-forecast.com</a>
+        </p>
         </div>
       </div>
     </>
