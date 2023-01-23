@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './styles/AirQualityStyle.css';
+import './styles/AirQualityStyleAadaptive.css';
 import useGetCoordinatesByAddressName from "./hook/useGetCoordinatesByAddressName";
 import Header from "./component/header/Header";
 import CitySearch from "./component/city-search/CitySearch";

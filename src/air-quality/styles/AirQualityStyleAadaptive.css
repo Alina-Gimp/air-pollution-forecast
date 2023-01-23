@@ -1,0 +1,368 @@
+
+
+@media screen and (max-width: 1200px) {
+    .block {
+        margin-left: 10px;
+    }
+
+    .city {
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .block {
+        margin-left: 10px;
+}
+}
+
+@media screen and (max-width: 768px) {
+    .city {
+        margin-left: 50px;
+    }
+
+    .indexQuality {
+        flex-direction: column;
+        padding-right: 9px;
+    }
+
+    .iconRecommendation {
+        height: 60px;
+    }
+
+    .recommendationDiv {
+        margin-left: 25px;
+    }
+
+    .iconPollution {
+        height: 45px;
+    }
+
+    .concentration {
+        font-size: large;
+    }
+
+    .recommendationText {
+        font-size: 18px;
+    }
+
+    .descriptionDiv {
+        align-self: start;
+    }
+
+    .blocksRecommendations {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .blockRecommendation {
+        margin-right: 20px;
+    }
+
+    .pollutions {
+        text-align: start;
+        margin-left: 25px;
+    }
+    .components_1_2 {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .blocks {
+        margin-left: 15px;
+    }
+
+    .block {
+        padding: 1rem 0;
+    }
+}
+
+@media screen and (max-width: 547px) {
+    .indexQuality {
+        flex-direction: column;
+        padding-right: 9px;
+    }
+
+    .iconRecommendation {
+        height: 50px;
+    }
+
+    .recommendationDiv {
+        margin-left: 25px;
+    }
+
+    .iconPollution {
+        height: 45px;
+    }
+
+    .concentration {
+        font-size: large;
+    }
+
+    .recommendationText {
+        font-size: 15px;
+    }
+
+    .descriptionDiv {
+        align-self: start;
+    }
+
+    .blocksRecommendations {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .pollutions {
+        text-align: start;
+        margin-left: 25px;
+    }
+    .components_1_2 {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .blocks {
+        margin-left: 15px;
+    }
+
+    .block {
+        padding: 1rem 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .indexQuality {
+        flex-direction: column;
+        padding-right: 9px;
+    }
+
+    .iconRecommendation {
+        height: 50px;
+    }
+
+    .recommendationDiv {
+        margin-left: 25px;
+    }
+
+    .iconPollution {
+        height: 45px;
+    }
+
+    .concentration {
+        font-size: large;
+    }
+
+    .recommendationText {
+        font-size: 15px;
+    }
+
+    .descriptionDiv {
+        align-self: start;
+    }
+
+    .blocksRecommendations {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .pollutions {
+        text-align: start;
+        margin-left: 25px;
+    }
+    .components_1_2 {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .blocks {
+        margin-left: 15px;
+    }
+
+    .block {
+        padding: 1rem 0;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .indexQuality {
+        flex-direction: column;
+        padding-right: 9px;
+    }
+
+    .iconRecommendation {
+        height: 45px;
+    }
+
+    .recommendationDiv {
+        margin-left: 25px;
+    }
+
+    .iconPollution {
+        height: 50px;
+    }
+
+    .concentration {
+        font-size: large;
+    }
+
+    .recommendationText {
+        font-size: 12px;
+    }
+
+    .descriptionDiv {
+        align-self: start;
+    }
+
+    .blocksRecommendations {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .pollutions {
+        text-align: start;
+        margin-left: 25px;
+    }
+    .components_1_2 {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .blocks {
+        margin-left: 15px;
+    }
+
+    .block {
+        padding: 1rem 0;
+    }
+}
+
+
+@media screen and (max-width: 380px) {
+    .indexQuality {
+        flex-direction: column;
+        padding-right: 9px;
+    }
+
+    .iconRecommendation {
+        height: 40px;
+    }
+
+    .recommendationDiv {
+        margin-left: 25px;
+    }
+
+    .iconPollution {
+        height: 40px;
+    }
+
+    .concentration {
+        font-size: medium;
+    }
+
+    .recommendationText {
+        font-size: 10px;
+    }
+
+    .descriptionDiv {
+        align-self: start;
+    }
+
+    .blocksRecommendations {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .pollutions {
+        text-align: start;
+        margin-left: 25px;
+    }
+    .components_1_2 {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .blocks {
+        margin-left: 15px;
+    }
+
+    .block {
+        padding: 1rem 0;
+    }
+
+    .input {
+        padding-inline-start: 11px;
+    }
+
+    .iconStatus {
+        height: 90px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .indexQuality {
+        flex-direction: column;
+        padding-right: 14px;
+        font-size: 30px;
+    }
+
+    .iconRecommendation {
+        height: 35px;
+    }
+
+    .recommendationDiv {
+        margin-left: 25px;
+    }
+
+    .iconPollution {
+        height: 40px;
+    }
+
+    .concentration {
+        font-size: medium;
+    }
+
+    .recommendationText {
+        font-size: 10px;
+    }
+
+    .descriptionDiv {
+        align-self: start;
+    }
+
+    .blocksRecommendations {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .pollutions {
+        text-align: start;
+        margin-left: 25px;
+        font-size: 20px;
+    }
+    .components_1_2 {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .blocks {
+        margin-left: 15px;
+    }
+
+    .block {
+        padding: 1rem 0;
+    }
+
+    .inputDiv {
+        margin-left: 15px;
+    }
+
+    .input{
+        padding-left: 8px;
+    }
+
+    .iconStatus {
+        height: 60px;
+    }
+}
+
+
