@@ -18,7 +18,7 @@
 
 @media screen and (max-width: 768px) {
     .city {
-        margin-left: 50px;
+        margin-left: 20px;
     }
 
     .indexQuality {
@@ -68,9 +68,6 @@
         justify-content: space-around;
     }
 
-    .blocks {
-        margin-left: 15px;
-    }
 
     .block {
         padding: 1rem 0;
@@ -121,9 +118,6 @@
         justify-content: space-around;
     }
 
-    .blocks {
-        margin-left: 15px;
-    }
 
     .block {
         padding: 1rem 0;
@@ -174,9 +168,6 @@
         justify-content: space-around;
     }
 
-    .blocks {
-        margin-left: 15px;
-    }
 
     .block {
         padding: 1rem 0;
@@ -227,9 +218,6 @@
         justify-content: space-around;
     }
 
-    .blocks {
-        margin-left: 15px;
-    }
 
     .block {
         padding: 1rem 0;
@@ -281,9 +269,6 @@
         justify-content: space-around;
     }
 
-    .blocks {
-        margin-left: 15px;
-    }
 
     .block {
         padding: 1rem 0;
