@@ -9,6 +9,7 @@ import pm10 from './pollution-icons/pm10.png';
 import nh3 from './pollution-icons/nh3.png';
 import PollutionElement from "./PollutionElement";
 
+
 function Pollution({pollution}) {
   const {
     co: carbonMonoxide = 0,
